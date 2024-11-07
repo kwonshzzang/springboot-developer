@@ -1,4 +1,4 @@
-package kr.co.kwonshzzang.springbootdeveloper.controller;
+package kr.co.kwonshzzang.springbootdeveloper;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
