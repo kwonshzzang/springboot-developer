@@ -14,7 +14,7 @@ import static java.util.Collections.emptyMap;
 import static org.junit.jupiter.api.Assertions.*;
 
 @Getter
-class JwtFactory {
+public class JwtFactory {
     private String subject = "kwonshzzang@gmail.com";
     private Date issuedAt = new Date();
     private Date expiration = new Date(new Date().getTime() + Duration.ofDays(14).toMillis());

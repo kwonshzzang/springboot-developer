@@ -2,12 +2,10 @@ package kr.co.kwonshzzang.springbootdeveloper.domain;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@AllArgsConstructor
 @Getter
 @Entity
 public class RefreshToken {
@@ -22,6 +20,11 @@ public class RefreshToken {
 
     @Column(name = "refresh_token", nullable = false)
     private String refreshToken;
+
+    public RefreshToken(Long userId, String refreshToken) {
+        this.userId = userId;
+        this.refreshToken = refreshToken;
+    }
 
     public RefreshToken update(String refreshToken) {
         this.refreshToken = refreshToken;
